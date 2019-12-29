@@ -38,8 +38,8 @@ class Login extends Component {
                         <Text style={{alignSelf: 'flex-end', paddingTop: 10}}>tidak punya akun?</Text>
                     </View>
                     <View style={styles.kolom1}>
-                        <Button bordered danger style={styles.button}>
-                            <Text style={styles.outlinebtn} onPress={() => this.props.navigation.navigate('Register')}>Daftar</Text>
+                        <Button bordered danger style={styles.button} onPress={() => this.props.navigation.navigate('Register')}>
+                            <Text style={styles.outlinebtn} >Daftar</Text>
                         </Button>
                     </View>
                 </View>
@@ -52,8 +52,7 @@ const styles = StyleSheet.create({
     container : {
         flex: 1,
         flexDirection: 'column',
-        paddingLeft : 20,
-        paddingRight : 20,
+        padding : 20,
         alignItems: 'center',
     },
     formbox : {

@@ -5,6 +5,9 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import Home from './src/components/Home';
 import Login from './src/components/Login';
 import Register from './src/components/Register';
+import Keranjang from './src/components/Keranjang';
+import Invoice from './src/components/Invoice';
+import User from './src/components/User';
 
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -27,6 +30,9 @@ const MainNavigator = createStackNavigator({
   Login: {screen: Login},
   Register: {screen: Register},
   Home: {screen: Home},
+  Keranjang: {screen: Keranjang},
+  Invoice: {screen: Invoice},
+  User: {screen: User},
 });
 
 const Nav = createAppContainer(MainNavigator);

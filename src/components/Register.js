@@ -16,7 +16,7 @@ class Register extends Component {
     return (
         <View style={styles.container}>
         
-        <Image source={require('../image/Logo.png')} />
+        <Image  source={require('../image/Logo.png')} />
 
         <View style={styles.box}>
             <Form style={styles.formbox}>
@@ -52,8 +52,8 @@ class Register extends Component {
                 <Text style={{ alignSelf: 'flex-end', paddingTop: 10 }}>punya akun?</Text>
             </View>
             <View style={styles.kolom1}>
-                <Button bordered danger style={styles.button}>
-                    <Text style={styles.outlinebtn} onPress={() => this.props.navigation.navigate('Login')}>Masuk</Text>
+                <Button bordered danger style={styles.button} onPress={() => this.props.navigation.navigate('Login')}>
+                    <Text style={styles.outlinebtn} >Masuk</Text>
                 </Button>
             </View>
         </View>
@@ -66,8 +66,7 @@ const styles = StyleSheet.create({
     container : {
         flex: 1,
         flexDirection: 'column',
-        paddingLeft : 20,
-        paddingRight : 20,
+        padding : 20,
         alignItems: 'center',
     },
     formbox : {
