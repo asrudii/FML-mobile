@@ -24,9 +24,9 @@ class Product extends Component {
       <View style={styles.containerproduct}>
         <Card style={styles.cardbox} >
             <CardItem header button onPress={this.props.pesan}>
+            {/* {this.props.idproduk} */}
                 <Image style={styles.imageproduct} source={require('../image/produk/strowberry.jpg')} />
                 <View style={{padding : 10, paddingTop: 0, alignItems: 'flex-start'}}>
-                    {this.props.idproduk}
                     <Text style={{marginBottom : 5, fontSize: 14}}>{this.props.namaproduk}</Text>
                     <Text style={{color : '#A9A9A9', fontSize: 12}}>{this.props.hargaproduk}</Text>
                     <AirbnbRating

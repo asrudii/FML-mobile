@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, AsyncStorage, FlatList} from 'react-native';
+import { View, StyleSheet, ScrollView, AsyncStorage, FlatList, Text} from 'react-native';
 import Header from './Header';
 import Menu from './Menu';
 import Kategori from './Kategori';
@@ -34,7 +34,7 @@ class Home extends Component {
                 produk : dataproduk,
                 namaproduk : '',
                 idproduk: '',
-                hargaproduk: '',
+                hargaproduk: ''
 
             })
         })
@@ -57,9 +57,12 @@ class Home extends Component {
 
     pesan = async () => {
         let datapesanan = {
-          namaproduk : this.state.namaproduk,
-          idproduk: this.state.idproduk,
-          hargaproduk: this.state.hargaproduk
+        //   namaproduk : this.state.namaproduk,
+        //   idproduk: this.state.idproduk,
+        //   hargaproduk: this.state.hargaproduk
+          namaproduk : 'thaitea',
+          idproduk: 1142,
+          hargaproduk: 2000
         };
     
         try {

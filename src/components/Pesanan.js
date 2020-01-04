@@ -21,7 +21,6 @@ class Pesanan extends Component {
     try {
       const data = await AsyncStorage.getItem('pesanan');
       let pesanandata = JSON.parse(data);
-      console.warn(pesanandata);
       if (pesanandata !== null) {
           this.setState({
             namaproduk: pesanandata.namaproduk,
@@ -48,7 +47,7 @@ class Pesanan extends Component {
             <CardItem header>
                 <Image style={styles.imageproduct} source={require('../image/produk/strowberry.jpg')} />
                 <View style={{padding : 10, paddingTop: 0, alignItems: 'flex-start'}}>
-                    {this.props.idproduk}
+                    {/* {this.props.idproduk} */}
                     <Text style={{marginBottom : 5, fontSize: 14}}>{this.state.namaproduk}</Text>
                     <View style={{flexDirection: 'row'}}>
                         <Text style={{color : '#A9A9A9', fontSize: 12}}>{this.state.hargaproduk}</Text>
