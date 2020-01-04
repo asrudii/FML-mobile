@@ -17,12 +17,12 @@ class Invoice extends Component {
                 <Card >
                     <CardItem style={{flexDirection: 'column'}} header button onPress={() => alert("This is Card Header")}>
                         <Text style={{fontSize: 24, color: '#F15C5E'}}>Rp. 20.012</Text>
-                        <Text style={{fontSize: 12, color: 'blue'}}>salin</Text>
                     </CardItem>
                 </Card>
             </View>
             <View style={{alignSelf: 'stretch'}}>
-                <Text> Transfer ke </Text>
+                
+                {/* <Text> Transfer ke </Text>
                 <List>
                     <ListItem thumbnail>
                     <Left>
@@ -44,11 +44,11 @@ class Invoice extends Component {
                         <Text note numberOfLines={1}>an. asep rudi luqmanul h</Text>
                     </Body>
                     </ListItem>
-                </List>
+                </List> */}
             </View>
             <View style={{alignSelf: 'stretch'}}>
                 <Button danger block style={{  borderRadius: 5, marginTop: 30}} onPress={() => this.props.navigation.navigate('Home')}>
-                    <Text style={{fontSize: 12}}> selesai </Text>
+                    <Text style={{fontSize: 12}}> kembali </Text>
                 </Button>
             </View>
         </View>

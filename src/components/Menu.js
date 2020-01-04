@@ -9,17 +9,20 @@ class Menu extends Component {
     };
   }
 
+
+
+
   render() {
     return (
         <View style={styles.menu}>
             <Card style={styles.menubox}>
-                <CardItem style={{flexDirection: 'column'}} header button onPress={() => alert("This is Card Header")}>
+                <CardItem style={{flexDirection: 'column'}} header button onPress={this.props.minuman}>
                     <Icon style={styles.iconmenu} type="FontAwesome" name='coffee' />
                     <Text style={{fontSize: 12}}>minuman</Text>
                 </CardItem>
             </Card>
             <Card style={styles.menubox}>
-                <CardItem style={{flexDirection: 'column'}} header button onPress={() => alert("This is Card Header")}>
+                <CardItem style={{flexDirection: 'column'}} header button onPress={this.props.makanan}>
                     <Icon style={styles.iconmenu} type="MaterialCommunityIcons" name='hamburger' />
                     <Text style={{fontSize: 12}}>makanan</Text>
                 </CardItem>

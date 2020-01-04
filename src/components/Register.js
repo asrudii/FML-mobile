@@ -2,15 +2,42 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { Button, Text, Form, Item, Input, Icon } from 'native-base';
 
+import axios from 'axios';
+
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
+        username: '',
+        email: '',
+        telp: '',
+        password: '',
+
     };
   }
   static navigationOptions = {
     header: null    
     };
+  
+    onChangeText = (key, val) => {
+        this.setState({ [key]: val })
+    }
+
+    signUp = async () => {
+        try {
+            axios.post('https://fmlserv.herokuapp.com/api/register', {
+                username: this.state.username, 
+                email: this.state.email,
+                telp: this.state.telp,
+                password: this.state.password
+             })
+             .then(res => {
+                alert('registered');
+             })
+        } catch (err) {
+          console.warn('error signing up: ', err)
+        }
+      }
 
   render() {
     return (
@@ -19,28 +46,28 @@ class Register extends Component {
         <Image  source={require('../image/Logo.png')} />
 
         <View style={styles.box}>
-            <Form style={styles.formbox}>
+            <Form style={styles.formbox} >
                 <Item style={{marginLeft: 0}}>
                     <Icon type="Feather" name='user' />
-                    <Input placeholder='username'/>
+                    <Input placeholder='username' onChangeText={val => this.onChangeText('username', val)} />
                 </Item>
                 <Item style={{marginLeft: 0}}>
                     <Icon type="Feather" name='mail' />
-                    <Input placeholder='email'/>
+                    <Input placeholder='email' onChangeText={val => this.onChangeText('email', val)} />
                 </Item>
                 <Item style={{marginLeft: 0}}>
                     <Icon type="Feather" name='phone' />
-                    <Input placeholder='telp'/>
+                    <Input placeholder='telp' onChangeText={val => this.onChangeText('telp', val)} />
                 </Item>
                 <Item style={{marginLeft: 0}}>
                     <Icon type="Feather" name='lock' />
-                    <Input placeholder='password' secureTextEntry={true}/>
+                    <Input placeholder='password' secureTextEntry={true} onChangeText={val => this.onChangeText('password', val)} />
                 </Item>
             </Form>
         </View>
 
         <View style={styles.box}>
-            <Button block danger style={styles.button}>
+            <Button block danger style={styles.button} onPress={this.signUp}>
                 <Text>Daftar</Text>
             </Button>
             <Text style={{alignSelf: 'center'}}>lupa password?</Text>

@@ -8,6 +8,9 @@ import Register from './src/components/Register';
 import Keranjang from './src/components/Keranjang';
 import Invoice from './src/components/Invoice';
 import User from './src/components/User';
+import Penjual from './src/components/Penjual';
+import Product from './src/components/Product';
+
 
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -33,6 +36,8 @@ const MainNavigator = createStackNavigator({
   Keranjang: {screen: Keranjang},
   Invoice: {screen: Invoice},
   User: {screen: User},
+  Penjual: {screen: Penjual},
+  Product: {screen: Product},
 });
 
 const Nav = createAppContainer(MainNavigator);

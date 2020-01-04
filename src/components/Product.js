@@ -8,6 +8,9 @@ class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      namaproduk : '',
+      hargaproduk : '',
+      idproduk : ''
     };
   }
 
@@ -15,15 +18,17 @@ class Product extends Component {
     console.warn("Rating is: " + rating)
   }
 
+
   render() {
     return (
       <View style={styles.containerproduct}>
         <Card style={styles.cardbox} >
-            <CardItem header button onPress={()=> alert('halo')}>
+            <CardItem header button onPress={this.props.pesan}>
                 <Image style={styles.imageproduct} source={require('../image/produk/strowberry.jpg')} />
                 <View style={{padding : 10, paddingTop: 0, alignItems: 'flex-start'}}>
-                    <Text style={{marginBottom : 5, fontSize: 14}}>Thai Tea Lemon</Text>
-                    <Text style={{color : '#A9A9A9', fontSize: 12}}>Rp. 5000</Text>
+                    {this.props.idproduk}
+                    <Text style={{marginBottom : 5, fontSize: 14}}>{this.props.namaproduk}</Text>
+                    <Text style={{color : '#A9A9A9', fontSize: 12}}>{this.props.hargaproduk}</Text>
                     <AirbnbRating
                         showRating={false}
                         count={5}
@@ -34,8 +39,9 @@ class Product extends Component {
                     />
                 </View>
                 <View style={{ width: 70}}>
-                  <TouchableOpacity onPress={()=> alert('masuk ke map')}>
-                    <Icon style={styles.iconmenu} type='MaterialIcons' name='place' />
+                  <TouchableOpacity onPress={this.props.penjual}>
+                    <Icon style={styles.iconmenu} type='FontAwesome5' name='store' />
+                    {/* <Icon style={styles.iconmenu} type='MaterialIcons' name='place' /> */}
                   </TouchableOpacity>
                 </View>
             </CardItem>
@@ -51,13 +57,12 @@ const styles = StyleSheet.create ({
     containerproduct : {
         flex: 1,
         flexDirection: 'column',
-        marginTop: 20
     },
     cardbox : {
         alignItems: 'flex-start'
     }, 
     iconmenu : {
-      fontSize : 40,
+      fontSize : 20,
       alignSelf: 'flex-end'
     },
     imageproduct : {

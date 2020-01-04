@@ -13,7 +13,7 @@ class Header extends Component {
   render() {
     return (
         <View style={styles.header}>
-            <View style={{flex:1}}>
+            <View style={{flex:1}} >
                 <Item style={styles.searchinput} rounded >
                     <Icon style={{fontSize: 18, color: '#2C2C2C'}} type="Feather" name='search' />
                     <Input style={styles.search} placeholder='cari dulu deh ...'/>

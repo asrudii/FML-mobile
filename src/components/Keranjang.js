@@ -61,7 +61,6 @@ class Keranjang extends Component {
                                 onValueChange={this.onValueChange.bind(this)}
                             >
                             <Picker.Item label="cod" value="key0" />
-                            <Picker.Item label="transfer bank" value="key1" />
                             </Picker>
                         </Form>
                     </View>

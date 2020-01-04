@@ -10,12 +10,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "jwt-decode": "^2.2.0",
     "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-app-intro": "^1.1.5",
     "react-native-gesture-handler": "^1.5.2",
+    "react-native-linear-gradient": "^2.5.6",
     "react-native-numeric-input": "^1.8.3",
+    "react-native-pure-jwt": "^2.1.1",
     "react-native-ratings": "^6.5.0",
     "react-navigation": "^4.0.10",
     "react-navigation-stack": "^1.10.3"
